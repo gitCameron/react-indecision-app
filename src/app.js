@@ -1,5 +1,7 @@
 console.log('App.js is running!  Right?');
 
+const appRoot = document.getElementById('app');
+
 // only render the subtitle and p tag if subtitle exists
 
 // JSX - Javascript XML
@@ -20,14 +22,20 @@ const onFormSubmit = (e) => {
     e.target.elements.option.value = '';
   }
 
+  optionCounter = 1;
+
   renderApp();
 };
 
+let optionCounter = 0;
+
 const onRemoveAll = () => {
     app.options = [];
-
+    optionCounter = 0;
     renderApp();
 };
+
+const numbers = [10, 22, 30];
 
 const renderApp = () => {
     const template = ( 
@@ -38,8 +46,11 @@ const renderApp = () => {
             <p>{app.options.length}</p>
             <button onClick={onRemoveAll}>Remove All</button>
             <ol>
-                <li>{app.options[0]}</li>
-                <li>{app.options[1]}</li>
+                {
+                    app.options.map((option) => {
+                        return <p key={option}>Option {optionCounter++}: {option}</p>
+                    })
+                }
             </ol>
             <form onSubmit={onFormSubmit}>
                 <input type="text" name="option"/>
@@ -51,7 +62,4 @@ const renderApp = () => {
     ReactDOM.render(template, appRoot);    
 }
 
-
-
-const appRoot = document.getElementById('app');
 renderApp();

@@ -2,6 +2,8 @@
 
 console.log('App.js is running!  Right?');
 
+var appRoot = document.getElementById('app');
+
 // only render the subtitle and p tag if subtitle exists
 
 // JSX - Javascript XML
@@ -22,14 +24,20 @@ var onFormSubmit = function onFormSubmit(e) {
         e.target.elements.option.value = '';
     }
 
+    optionCounter = 1;
+
     renderApp();
 };
+
+var optionCounter = 0;
 
 var onRemoveAll = function onRemoveAll() {
     app.options = [];
-
+    optionCounter = 0;
     renderApp();
 };
+
+var numbers = [10, 22, 30];
 
 var renderApp = function renderApp() {
     var template = React.createElement(
@@ -65,16 +73,16 @@ var renderApp = function renderApp() {
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                app.options[0]
-            ),
-            React.createElement(
-                'li',
-                null,
-                app.options[1]
-            )
+            app.options.map(function (option) {
+                return React.createElement(
+                    'p',
+                    { key: option },
+                    'Option ',
+                    optionCounter++,
+                    ': ',
+                    option
+                );
+            })
         ),
         React.createElement(
             'form',
@@ -91,5 +99,4 @@ var renderApp = function renderApp() {
     ReactDOM.render(template, appRoot);
 };
 
-var appRoot = document.getElementById('app');
 renderApp();
