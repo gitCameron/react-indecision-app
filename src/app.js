@@ -28,6 +28,7 @@ const onFormSubmit = (e) => {
 };
 
 let optionCounter = 0;
+let whatShouldIDoButton = true;
 
 const onRemoveAll = () => {
     app.options = [];
@@ -35,7 +36,13 @@ const onRemoveAll = () => {
     renderApp();
 };
 
-const numbers = [10, 22, 30];
+const onMakeDecision = () => {
+
+    const randomNumber = Math.floor(Math.random() * app.options.length);
+    const option = app.options[randomNumber];
+
+    alert(option);
+};
 
 const renderApp = () => {
     const template = ( 
@@ -43,7 +50,7 @@ const renderApp = () => {
             <h1> {app.title} </h1>
             {app.subtitle && <h2>{app.subtitle}</h2>}
             <p>{app.options.length > 0 ? 'Here are your options:' : 'No Options'}</p>
-            <p>{app.options.length}</p>
+            <button disabled={app.options.length === 0} onClick={onMakeDecision}>What should I do?</button>
             <button onClick={onRemoveAll}>Remove All</button>
             <ol>
                 {
