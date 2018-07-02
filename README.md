@@ -11,6 +11,6 @@
     * Answer all questions
     * yarn add babel-preset-react@\<version> babel-preset-env@\<version>
 7.  Run Babel:   
-    * babel src/app.js --out-file=public/script/app.js --presets=env,react
+    * babel src/app.js --out-file=public/scripts/app.js --presets=env,react
 8.  Create a Watch:  
-    * babel src/app.js --out-file=public/script/app.js --presets=env,react --watch
+    * babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
