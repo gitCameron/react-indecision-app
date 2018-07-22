@@ -1,0 +1,13 @@
+
+Props vs State (<MyComponent />)
+
+Similarities:
+- both are objects
+- both can be used when rendering the component
+- changes to both cause re-renders
+
+Differences:
+- Props comes from above whether it's from a parent component or some jsx that gets passed down from ReactDOM.rendering
+- State is defined in the component itself
+- Props cannot be changed by the component itself
+- State can be changed by the component itself
