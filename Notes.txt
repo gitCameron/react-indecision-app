@@ -11,3 +11,15 @@ Differences:
 - State is defined in the component itself
 - Props cannot be changed by the component itself
 - State can be changed by the component itself
+
+
+If you need some more advanced features and need to use state then use a class based component.
+If you find yourself creating a class with just a render method then it is probably best to convert it to a stateless component.
+
+componentDidMount() - it is invoked immediately after a component is mounted or inserted into the tree.  
+
+componentDidUpdate() -  is invoked immediately after updating occurs.  This is a good place to do network requests as long as you compare the 
+current props to previous props.
+
+componentWillUnmount() - invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, 
+such as invalidating timers, canceling network requests, or cleaning up any subscriptions
