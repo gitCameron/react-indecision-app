@@ -1,4 +1,6 @@
 
+// switch babel, componentdidmount, componentdidupdate, use local storage
+
 class Counter extends React.Component {
 
     constructor(props) {
@@ -7,10 +9,29 @@ class Counter extends React.Component {
         this.handleMinusOne = this.handleMinusOne.bind(this);
         this.handleReset = this.handleReset.bind(this);
         this.state = {
-            count: props.count
+            count: 0
         };
     }
 
+    componentDidMount() {
+        try {
+            const stringCount  = localStorage.getItem('count');
+            const count = parseInt(stringCount, 10);
+
+            if (!isNaN(count)) {
+                this.setState(() => ({ count }))
+            }
+        } catch(e) {
+            // do nothing at the moment
+        }
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.count !== this.state.count) {
+            const json = JSON.stringify(this.state.count);
+            localStorage.setItem('count', json);
+        }
+    }
     handleAddOne() {
         this.setState((prevState) => {
             return {
@@ -46,10 +67,6 @@ class Counter extends React.Component {
         );
     }
 }
-
-Counter.defaultProps = {
-    count: 0
-};
 
 
 // Create 3 methods: handleAddOne, handleMinusOne, handleReset
