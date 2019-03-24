@@ -1,1 +1,9 @@
-console.log('app.js is running!');
+// external packages: install -> import -> use
+import validator from 'validator';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp';
+
+
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+
