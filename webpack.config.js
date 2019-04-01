@@ -1,7 +1,6 @@
 // needs to know the entry point and where to output
 
 const path = require('path');
-console.log(__dirname);
 
 module.exports = {
     entry: './src/app.js',
@@ -16,7 +15,10 @@ module.exports = {
             exclude: /node_modules/
         }]
     },
-    devtool: 'cheap-module-eval-source-map'
+    devtool: 'cheap-module-eval-source-map',
+    devServer: {
+        contentBase: path.join(__dirname, 'public')
+    }
 };
 
 // loader(s)
