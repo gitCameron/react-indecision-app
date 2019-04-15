@@ -16,13 +16,24 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+<<<<<<< HEAD
     "live-server": "^1.2.1",
+=======
+    "css-loader": "^2.1.1",
+    "live-server": "1.2.1",
+    "node-sass": "^4.11.0",
+>>>>>>> develop
     "react": "16.0.0",
     "react-dev-utils": "^8.0.0",
     "react-dom": "16.0.0",
+    "react-modal": "^3.8.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "validator": "^10.11.0",
-    "webpack": "3.1.0",
-    "webpack-dev-server": "2.5.1"
+    "webpack": "^4.30.0",
+    "webpack-dev-server": "^3.3.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
+  }
 }
