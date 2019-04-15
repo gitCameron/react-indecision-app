@@ -24,3 +24,7 @@ current props to previous props.
 componentWillUnmount() - invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, 
 such as invalidating timers, canceling network requests, or cleaning up any subscriptions.
 
+Package.json:
+- the '^' in front of the versioning numbers is called Semantic Versioning.
+- It means changes are backwards compatible new functionality, old functionality deprecated but operational, possible large internal refactor, and bug fix.
+

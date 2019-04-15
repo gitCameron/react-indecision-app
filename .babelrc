@@ -7,3 +7,5 @@
         ["@babel/plugin-proposal-class-properties"]
     ]
 }
+
+//Presets can act as an array of Babel plugins or even a sharable options config
