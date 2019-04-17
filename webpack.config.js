@@ -1,6 +1,9 @@
-// needs to know the entry point and where to output
+// webpack needs to know the entry point and where to output
+// module.exports is from Node.js
+// https://webpack.js.org/
 
 const path = require('path');
+// console.log(path.join(__dirname, 'public'));
 
 module.exports = {
     entry: './src/app.js',
@@ -28,4 +31,3 @@ module.exports = {
     }
 };
 
-// loader(s)

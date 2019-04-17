@@ -5,6 +5,10 @@ import Header from './Header';
 import Action from './Action';
 import OptionModal from './OptionModal';
 
+// Note: big difference between export and export default.  Export default cannot come
+// before a variable declaration.  You can declare a default export within a single export
+// by doing the following: export { a, b, c as default }.  In the example, 'c' is the default export.
+
 export default class IndecisionApp extends React.Component {
 
     state = {
