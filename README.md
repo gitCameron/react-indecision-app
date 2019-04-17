@@ -5,12 +5,22 @@
 2.  Install Node at nodejs.org (Node is javascript on the server).  You can now use npm (Node Package Manager)
 3.  Install yarn (another package manager) using npm &rarr; npm install -g yarn
 4.  yarn global add live-server &rarr; allows you to run live-server + path to index.html.  For this project it is live-server public
-5.  Babel is a javascript compiler.  To install globally &rarr; yarn global add babel-cli@\<version> 
-6.  Install Babel presets:  
-    * yarn init
-    * Answer all questions
-    * yarn add babel-preset-react@\<version> babel-preset-env@\<version>
-7.  Run Babel:   
-    * babel src/app.js --out-file=public/scripts/app.js --presets=env,react
-8.  Create a Watch:  
-    * babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+5.  Babel is a javascript compiler.
+6.  Add the following using yarn add <package>:  
+    * @babel/cli,
+    * @babel/core,
+    * @babel/plugin-proposal-class-properties,
+    * @babel/preset-env,
+    * @babel/preset-react,
+    * babel-loader,
+    * css-loader,
+    * live-server,
+    * node-sass,
+    * react,
+    * react-dom,
+    * react-modal,
+    * sass-loader,
+    * style-loader,
+    * validator,
+    * webpack,
+    * webpack-dev-server
