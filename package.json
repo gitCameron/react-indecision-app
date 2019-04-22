@@ -16,13 +16,9 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
-<<<<<<< HEAD
-    "live-server": "^1.2.1",
-=======
     "css-loader": "^2.1.1",
     "live-server": "1.2.1",
     "node-sass": "^4.11.0",
->>>>>>> develop
     "react": "16.0.0",
     "react-dev-utils": "^8.0.0",
     "react-dom": "16.0.0",
