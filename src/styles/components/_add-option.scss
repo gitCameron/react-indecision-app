@@ -1,0 +1,26 @@
+
+// add option error
+
+.add-option-error {
+    color: $app-lavender;
+    font-style: italic;
+    font-size: $small-size;
+    padding: 0 $medium-size;
+    margin: $small-size 0 0 0;
+}
+
+.add-option {
+    display: flex;
+    padding: $medium-size;
+}
+
+.add-option__input {
+    background: $navy-ish;
+    border: none;
+    border-bottom: 3px solid darken($navy-ish, 10%);
+    color: white;
+    flex-grow: 1;
+    font-size: $medium-size;
+    margin-right: $small-size;
+    padding: $small-size;
+}
