@@ -6,7 +6,7 @@ html {
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-background: $navy-ish;
+    background: lighten($navy-ish, 4%);
 }
 
 button {

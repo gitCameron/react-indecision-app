@@ -4,7 +4,7 @@
 1.  Need a text editor such as Visual Studio Code, Sublime, or Atom
 2.  Install Node at nodejs.org (Node is javascript on the server).  You can now use npm (Node Package Manager)
 3.  Install yarn (another package manager) using npm &rarr; npm install -g yarn
-4.  yarn global add live-server &rarr; allows you to run live-server + path to index.html.  For this project it is live-server public
+4.  yarn add live-server &rarr; allows you to run live-server + path to index.html.  For this project it is live-server public
 5.  Babel is a javascript compiler.
 6.  Add the following using yarn add <package>:  
     * @babel/cli,
