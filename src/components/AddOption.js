@@ -13,6 +13,7 @@ export default class AddOption extends React.Component {
         const error = this.props.handleAddOption(option);
 
         this.setState(() => ({ error: error}));
+        setTimeout(() => this.setState({error: undefined}), 5000);
 
         if (!error) {
             e.target.elements.option.value = '';
@@ -23,11 +24,12 @@ export default class AddOption extends React.Component {
 
         return (
             <div>
-                <form onSubmit={this.handleAddOption}>
-                    <input type="text" name="option"/>
-                    <button>Add Option</button>
+                {this.state.error && <p className="add-option-error">{this.state.error}</p>}
+                <form className="add-option" onSubmit={this.handleAddOption}>
+                    <input className="add-option__input" type="text" name="option"/>
+                    <button className="small-button">Add Option</button>
                 </form>
-                {this.state.error && <p style={{color: 'red'}}>{this.state.error}</p>}
+  
             </div>
         
         );

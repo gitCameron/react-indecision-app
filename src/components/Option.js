@@ -3,9 +3,10 @@ import React from 'react';
 const Option = (props) => {
     
     return (
-        <div>
-            {props.optionText}
-            <button style={{marginLeft: '15px'}}
+        <div className="option">
+            <p className="option__text">{props.count}. {props.optionText}</p>
+            <button 
+                className="small-button small-button--link"
                 onClick={(e) => {
                     props.handleDeleteOption(props.optionText);
                 }}
