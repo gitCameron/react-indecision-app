@@ -2,7 +2,7 @@
 .header {
     background: $dark-purple;
     color: white;
-    margin-bottom: $xlarge-size;
+    margin-bottom: $large-size;
     padding: $medium-size 0;
 }
 
@@ -16,4 +16,10 @@
     font-size: $medium-size;
     font-weight: 500;
     margin: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .header {
+        margin-bottom: $xlarge-size;
+    }
 }

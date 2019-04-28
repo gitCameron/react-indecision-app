@@ -11,7 +11,9 @@
 
 .add-option {
     display: flex;
+    flex-direction: column;
     padding: $medium-size;
+    margin-top: 10px;
 }
 
 .add-option__input {
@@ -21,6 +23,18 @@
     color: white;
     flex-grow: 1;
     font-size: $medium-size;
-    margin-right: $small-size;
+    margin: 0 0 $small-size 0;
+    // margin-right: $small-size;
     padding: $small-size;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .add-option {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .add-option__input {
+        margin: 0 $small-size 0 0;
+    }
 }
